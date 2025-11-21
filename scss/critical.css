@@ -235,9 +235,20 @@ p {
   border-color: var(--colors-neutral-900);
 }
 
-.form-modal form {
+.form-modal {
+  background: var(--colors-neutral-0);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px 0 rgba(32, 37, 41, 0.08);
+  padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 33.125rem;
+}
+.form-modal form {
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 2rem;
 }
 .form-modal label {
   font: inherit;
@@ -284,6 +295,10 @@ p {
   position: absolute;
   color: var(--colors-red-700);
 }
+.form-modal .success-message {
+  visibility: hidden;
+  position: absolute;
+}
 .form-modal .form-group:has(input:user-invalid) input,
 .form-modal .form-group:has(input:user-invalid) textarea,
 .form-modal .form-group:has(textarea:user-invalid) input,
@@ -294,6 +309,16 @@ p {
 .form-modal .form-group:has(textarea:user-invalid) .error-message {
   visibility: visible;
   position: relative;
+}
+.form-modal .form-footer {
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1.25rem;
+  text-align: center;
+}
+.form-modal .login {
+  text-decoration: none;
+  color: var(--colors-blue-600);
 }
 
 header {
