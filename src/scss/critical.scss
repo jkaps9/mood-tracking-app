@@ -200,6 +200,24 @@ p {
         0 0 0 5px var(--colors-blue-600);
     }
   }
+
+  .error-message {
+    visibility: hidden;
+    position: absolute;
+    color: var(--colors-red-700);
+  }
+
+  .form-group:has(input:user-invalid),
+  .form-group:has(textarea:user-invalid) {
+    input,
+    textarea {
+      border: 1px solid var(--colors-red-700);
+    }
+    .error-message {
+      visibility: visible;
+      position: relative;
+    }
+  }
 }
 
 header {
