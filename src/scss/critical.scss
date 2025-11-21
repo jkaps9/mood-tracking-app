@@ -218,6 +218,11 @@ p {
     color: var(--colors-red-700);
   }
 
+  .success-message {
+    visibility: hidden;
+    position: absolute;
+  }
+
   .form-group:has(input:user-invalid),
   .form-group:has(textarea:user-invalid) {
     input,
