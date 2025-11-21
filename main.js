@@ -1,9 +1,9 @@
 // Navigation
-const navToggle = document.querySelector(".nav-toggle");
+const dropdownToggle = document.querySelector(".profile");
 const mainNav = document.querySelector(".main-nav");
 
-if (navToggle && mainNav) {
-  navToggle.addEventListener("click", () => {
+if (dropdownToggle && mainNav) {
+  dropdownToggle.addEventListener("click", () => {
     mainNav.classList.toggle("visible");
   });
 }
