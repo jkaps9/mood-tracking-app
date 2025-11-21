@@ -362,7 +362,7 @@ header {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: clamp(3rem, 1.8571rem + 2.381vw, 4rem);
     justify-items: center;
     text-align: center;
   }
@@ -370,7 +370,7 @@ header {
   &__text {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: clamp(0.625rem, 1.4286rem + -0.8929vw, 1rem);
   }
 
   &__subheader {
