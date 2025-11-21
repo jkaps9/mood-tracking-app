@@ -73,6 +73,7 @@
 }
 
 @mixin textpreset4regular {
+  @include textpreset4;
   font-weight: 400;
 }
 // \\
