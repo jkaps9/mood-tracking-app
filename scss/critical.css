@@ -475,7 +475,7 @@ header .nav__item a {
 }
 .mood-statistics .card__title-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.75rem;
 }
 .mood-statistics .card__subtitle {
@@ -494,6 +494,7 @@ header .nav__item a {
   min-height: 9.375rem;
   padding: 1.25rem 1rem;
   position: relative;
+  overflow: hidden;
 }
 .mood-statistics .card__data .bg-image {
   position: absolute;
@@ -503,6 +504,88 @@ header .nav__item a {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
+}
+.mood-statistics .card__title {
+  font-size: clamp(1.75rem, 1.5115rem + 1.0178vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+.mood-statistics .card__table {
+  align-self: stretch;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+.mood-statistics .bar-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+.mood-statistics .bar-container .row-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 0;
+}
+.mood-statistics .bar-container .row-lines .line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--colors-blue-100);
+}
+.mood-statistics .bar-container .row-lines #line6 {
+  background-color: transparent;
+}
+.mood-statistics .y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mood-statistics .y-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.mood-statistics .bar {
+  background-color: red;
+  width: 40px;
+  height: 20%; /*need to do height 
+dynamically*/
+  position: relative;
+  z-index: 1;
+}
+.mood-statistics #bar2 {
+  height: 40%;
+}
+.mood-statistics #bar3 {
+  height: 60%;
+}
+.mood-statistics #bar4 {
+  height: 80%;
+}
+.mood-statistics #bar5 {
+  height: 100%;
+}
+.mood-statistics .x-axis {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2;
+}
+.mood-statistics .x-label {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 64rem) {
