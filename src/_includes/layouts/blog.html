@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+  <section class="blog-posts">
+    <div class="container">
+      <div class="blog__list">
+        {% for post in collections.posts %}
+          {% include "partials/blog-post-preview.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
