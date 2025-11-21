@@ -252,16 +252,47 @@ p {
 .form-modal input,
 .form-modal textarea {
   border-radius: 10px;
-  padding: 0.75rem 1rem;
   border: 1px solid var(--border-color);
   background: var(--colors-neutral-0);
   box-shadow: 0 1px 2px 0 rgba(33, 33, 77, 0.05);
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--colors-neutral-600);
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: -0.3px;
+  overflow: hidden;
+  padding: 0.75rem 1rem;
+  text-overflow: ellipsis;
+}
+.form-modal input:hover,
+.form-modal textarea:hover {
+  border-color: 1px solid var(--colors-neutral-600);
+}
+.form-modal input:focus-visible, .form-modal input:active,
+.form-modal textarea:focus-visible,
+.form-modal textarea:active {
+  border: 1px solid var(--border-color);
+  color: var(--colors-neutral-900);
+}
+.form-modal input:active,
+.form-modal textarea:active {
+  box-shadow: 0 0 0 3px var(--colors-neutral-0), 0 0 0 5px var(--colors-blue-600);
+}
+.form-modal .error-message {
+  visibility: hidden;
+  position: absolute;
+  color: var(--colors-red-700);
+}
+.form-modal .form-group:has(input:user-invalid) input,
+.form-modal .form-group:has(input:user-invalid) textarea,
+.form-modal .form-group:has(textarea:user-invalid) input,
+.form-modal .form-group:has(textarea:user-invalid) textarea {
+  border: 1px solid var(--colors-red-700);
+}
+.form-modal .form-group:has(input:user-invalid) .error-message,
+.form-modal .form-group:has(textarea:user-invalid) .error-message {
+  visibility: visible;
+  position: relative;
 }
 
 header {
