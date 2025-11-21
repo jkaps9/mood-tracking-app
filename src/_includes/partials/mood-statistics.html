@@ -1,11 +1,12 @@
 <section class="mood-statistics">
   <div class="container">
-    <div class="statistics__card">
+    <div class="mood-statistics__card">
       <div class="card__title-row">
         <h2 class="card__subtitle">Average Mood</h2>
         <p>(Last 5 Check-ins)</p>
       </div>
       <div class="card__data">
+        <div class="bg-image">{% include "svgs/bg-pattern-averages.svg" %}</div>
         <h3>Keep tracking!</h3>
         <p>Log 5 check-ins to see your average mood.</p>
       </div>
@@ -14,14 +15,15 @@
         <p>(Last 5 Check-ins)</p>
       </div>
       <div class="card__data">
+        <div class="bg-image">{% include "svgs/bg-pattern-averages.svg" %}</div>
         <h3>Not enough data yet!</h3>
         <p>Track 5 nights to view average sleep.</p>
       </div>
     </div>
-    <div class="statistics__card">
+    <div class="mood-statistics__card">
       <h2 class="card__title">Mood and sleep trends</h2>
 
-      <div class="card__data">
+      <div class="card__table">
         <p>[[insert table here]]</p>
       </div>
     </div>
