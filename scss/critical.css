@@ -420,14 +420,14 @@ header .nav__item:hover::after {
 .hero .container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: clamp(3rem, 1.8571rem + 2.381vw, 4rem);
   justify-items: center;
   text-align: center;
 }
 .hero__text {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: clamp(0.625rem, 1.4286rem - 0.8929vw, 1rem);
 }
 .hero__subheader {
   font-size: clamp(1.75rem, 1.5115rem + 1.0178vw, 2rem);
