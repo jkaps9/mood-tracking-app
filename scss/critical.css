@@ -142,13 +142,14 @@ select {
   --text-secondary: #555;
   --text-muted: #666;
   --border-color: var(--colors-neutral-300);
-  --card-bg: #ffffff;
+  --card-bg: var(--colors-neutral-0);
   --footer-bg: #111;
   --cta-bg: #1a1a1a;
-  --container-max-width: 70rem;
+  --container-max-width: 73.125rem;
   --container-width: 90%;
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
-  --card-padding: 1.5rem 2rem;
+  --section-spacing: 4rem;
+  --card-padding: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem)
+    clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -189,6 +190,10 @@ section {
 
 p {
   color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
 }
 
 .accent-text {
@@ -376,14 +381,10 @@ header .profile-info__name {
   margin-bottom: 0.125rem;
 }
 header .profile-info__email {
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: -0.3px;
-  line-height: 1.4;
   color: var(--colors-neutral-300);
 }
 header .main-nav.visible {
-  background-color: var(--bg-color);
+  background-color: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 5px 8px 0 rgba(33, 33, 77, 0.16);
   visibility: visible;
@@ -457,24 +458,55 @@ header .nav__item a {
   line-height: 1.2;
 }
 
-.services__card {
+.mood-statistics .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.mood-statistics__card {
+  align-items: flex-start;
   background-color: var(--card-bg);
+  border: 1px solid var(--colors-blue-100);
   border-radius: 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  color: var(--text-color);
-  padding: var(--card-padding);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: var(--card-padding);
 }
-.services__icon {
-  max-width: 3rem;
+.mood-statistics .card__title-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
 }
-.services__icon svg {
-  max-width: 100%;
-  height: auto;
+.mood-statistics .card__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
 }
-.services__icon svg * {
-  fill: var(--text-secondary);
+.mood-statistics .card__data {
+  align-self: stretch;
+  background-color: var(--colors-blue-100);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 9.375rem;
+  padding: 1.25rem 1rem;
+  position: relative;
+}
+.mood-statistics .card__data .bg-image {
+  position: absolute;
+  right: -182px;
+}
+.mood-statistics .card__data h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (min-width: 64rem) {
+  .mood-statistics .container {
+    grid-template-columns: 370px 1fr;
+  }
 }
