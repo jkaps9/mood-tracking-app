@@ -2,8 +2,14 @@
   "name": "Mood Tracker",
   "navigation": [
     {
-      "text": "Home",
-      "url": "/"
+      "text": "Settings",
+      "url": "/",
+      "icon": "icon-settings.svg"
+    },
+    {
+      "text": "Logout",
+      "url": "/",
+      "icon": "icon-logout.svg"
     }
   ],
   "moodEntries": [

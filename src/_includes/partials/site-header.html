@@ -7,30 +7,37 @@
         aria-label="{{ site.name }} - home"
       >
         {% include "svgs/logo.svg" %}
-        <p class="logo__company-name">Company</p>
       </a>
       <nav
-        class="main-nav"
+        class="main-nav visible"
         aria-label="main"
       >
+        <div class="profile-info">
+          <h2 class="profile-info__name">Lisa Maria</h2>
+          <p class="profile-info__email">lisa@mail.com</p>
+        </div>
+        <div class="divider"></div>
         <ul class="nav__list">
           {% for item in site.navigation %}
             <li class="nav__item">
+              {% include "svgs/" + item.icon %}
               <a href="{{ item.url | url }}">{{ item.text }}</a>
             </li>
           {% endfor %}
         </ul>
-        <a
-          href="#"
-          class="btn btn--primary"
-        >
-          Contact Us
-        </a>
       </nav>
-      <button class="nav-toggle">
-        {% include "svgs/icon-hamburger.svg" %}
-        {% include "svgs/icon-close.svg" %}
-      </button>
+
+      <div class="profile">
+        <div class="profile-image">
+          <img
+            src="{{ '/assets/images/avatar-lisa.jpg' | url }}"
+            alt="profile avatar"
+          />
+        </div>
+        <button class="dropdown-toggle">
+          {% include "svgs/icon-dropdown-arrow.svg" %}
+        </button>
+      </div>
     </div>
   </div>
 </header>
