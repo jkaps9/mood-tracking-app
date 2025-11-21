@@ -149,6 +149,42 @@ p {
   }
 }
 
+.form-modal {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    font: inherit;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--colors-neutral-0);
+    box-shadow: 0 1px 2px 0 rgba(33, 33, 77, 0.05);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+  }
+}
+
 header {
   position: relative;
 
