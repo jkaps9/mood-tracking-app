@@ -173,7 +173,7 @@ body {
   line-height: 1.6;
   font-family: "Reddit Sans", Arial, Helvetica, sans-serif;
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background: linear-gradient(180deg, #f5f5ff 72.99%, #e0e0ff 100%);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -202,7 +202,7 @@ p {
   display: inline-block;
   cursor: pointer;
   font-family: "Reddit Sans", Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
   padding: 1em 2em;
@@ -417,8 +417,39 @@ header .nav__item:hover::after {
   width: 100%;
 }
 
-footer {
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  justify-items: center;
   text-align: center;
+}
+.hero__text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.hero__subheader {
+  font-size: clamp(1.75rem, 1.5115rem + 1.0178vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+.hero__title {
+  font-size: clamp(2.875rem, 2.5172rem + 1.5267vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+@media (min-width: 48rem) {
+  .hero__title {
+    line-height: 1.4;
+  }
+}
+.hero__date {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .services__card {

@@ -56,91 +56,24 @@
 </header>
 
     <main>
-  <section class="services">
+  <section class="hero">
   <div class="container">
-    
+    <div class="hero__text">
+      <span class="accent-text hero__subheader textpreset3">Hello, Lisa!</span>
+      <h1 class="hero__title">How are you feeling today?</h1>
+      <p class="hero__date">Wednesday, April 16th, 2025</p>
+    </div>
+    <div class="button">
+      <a
+        href="#"
+        class="btn btn--primary"
+      >
+        Log today's mood
+      </a>
+    </div>
   </div>
 </section>
 
-  <div class="container">
-    <a
-      href=""
-      class="btn btn--primary"
-    >
-      Sign Up
-    </a>
-    <a
-      href=""
-      class="btn btn--disabled"
-    >
-      Sign Up
-    </a>
-    <a
-      href=""
-      class="btn btn--secondary"
-    >
-      Sign Up
-    </a>
-    <div class="form-modal">
-  <div class="intro-text">
-    <h1>Create an account</h1>
-    <p>Join to track your daily mood and sleep with ease.</p>
-  </div>
-  <form id="create-account">
-    <div class="success-message">
-      <div class="title">
-        <h2>Signed Up Successfully</h2>
-      </div>
-      <p>
-        Thank you for signing up. You should receive a confirmation email soon.
-      </p>
-    </div>
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        oninvalid="this.setCustomValidity('Please enter a valid email address')"
-        oninput="this.setCustomValidity('')"
-        placeholder="name@mail.com"
-        required
-      />
-      <div class="error-message">Invalid email format.</div>
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        oninvalid="this.setCustomValidity('Please enter a valid password')"
-        oninput="this.setCustomValidity('')"
-        required
-      />
-      <div class="error-message">Please enter a valid password</div>
-    </div>
-    <div class="form-group form-footer">
-      <button
-        class="btn btn--primary"
-        type="submit"
-      >
-        Sign Up
-      </button>
-      <p>
-        Already got an account?
-        <a
-          href="#"
-          class="login"
-        >
-          Log in.
-        </a>
-      </p>
-    </div>
-  </form>
-</div>
-
-  </div>
 </main>
     <script src="/mood-tracking-app/main.js"></script>
   </body>
