@@ -102,10 +102,12 @@ p {
 }
 
 .btn {
+  border: none;
   border-radius: 10px;
   color: var(--colors-neutral-0);
   display: inline-block;
   cursor: pointer;
+  font-family: "Reddit Sans", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
@@ -161,7 +163,6 @@ p {
     margin-bottom: 0.5rem;
   }
 
-  button,
   input,
   textarea {
     font: inherit;
