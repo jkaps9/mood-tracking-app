@@ -47,14 +47,9 @@ export default function (config) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
   });
 
-  // Add collections
-  config.addCollection("posts", function (collection) {
-    return collection.getFilteredByGlob("src/posts/**/*.md");
-  });
-
   return {
     pathPrefix:
-      process.env.NODE_ENV === "production" ? "/eleventy-template/" : "/",
+      process.env.NODE_ENV === "production" ? "/mood-tracking-app/" : "/",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
