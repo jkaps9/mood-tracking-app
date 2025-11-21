@@ -43,10 +43,10 @@
   --cta-bg: #1a1a1a;
 
   // CONTAINER
-  --container-max-width: 70rem;
+  --container-max-width: 73.125rem;
   --container-width: 90%;
 
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+  --section-spacing: 4rem;
   --card-padding: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem)
     clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
 }
