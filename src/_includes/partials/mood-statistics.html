@@ -24,7 +24,110 @@
       <h2 class="card__title">Mood and sleep trends</h2>
 
       <div class="card__table">
-        <p>[[insert table here]]</p>
+        <div class="y-axis">
+          <div class="y-label">
+            {% include "svgs/icon-sleep.svg" %}
+            <p>9+ hours</p>
+          </div>
+          <div class="y-label">
+            {% include "svgs/icon-sleep.svg" %}
+            <p>7-8 hours</p>
+          </div>
+          <div class="y-label">
+            {% include "svgs/icon-sleep.svg" %}
+            <p>5-6 hours</p>
+          </div>
+          <div class="y-label">
+            {% include "svgs/icon-sleep.svg" %}
+            <p>3-4 hours</p>
+          </div>
+          <div class="y-label">
+            {% include "svgs/icon-sleep.svg" %}
+            <p>0-2 hours</p>
+          </div>
+          <div class="y-label"></div>
+        </div>
+
+        <div class="bar-container">
+          <div class="row-lines">
+            <div
+              class="line"
+              id="line1"
+            ></div>
+            <div
+              class="line"
+              id="line2"
+            ></div>
+            <div
+              class="line"
+              id="line3"
+            ></div>
+            <div
+              class="line"
+              id="line4"
+            ></div>
+            <div
+              class="line"
+              id="line5"
+            ></div>
+            <div
+              class="line"
+              id="line6"
+            ></div>
+          </div>
+          {% for i in range(1, 12) -%}
+            <div
+              id="bar{{ i }}"
+              class="bar"
+            ></div>
+          {%- endfor %}
+        </div>
+        <div class="x-axis">
+          <div class="x-label">
+            <p class="month">March</p>
+            <p class="day">31</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">02</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">04</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">06</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">07</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">09</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">10</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">12</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">13</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">14</p>
+          </div>
+          <div class="x-label">
+            <p class="month">April</p>
+            <p class="day">15</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
