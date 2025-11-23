@@ -64,6 +64,65 @@
         </button>
       </div>
     </div>
+    <div class="settings-modal">
+      <div class="form-modal form-modal--wide">
+  <div class="close-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" class="close"><g fill-rule="evenodd" opacity=".5"><path d="M2.222.808l16.97 16.97-1.414 1.414L.808 2.222z"/><path d="M.808 17.778L17.778.808l1.414 1.414-16.97 16.97z"/></g></svg></div>
+  <div class="intro-text">
+    <h1 class="form-modal__title">Update your profile</h1>
+    <p>Personalize your account with your name and photo.</p>
+  </div>
+  <form id="settings">
+    <div class="success-message">
+      <div class="title">
+        <h2>Success!</h2>
+      </div>
+      <p>Settings updated successfully</p>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        oninvalid="this.setCustomValidity('Name cannot be blank')"
+        oninput="this.setCustomValidity('')"
+        placeholder="Full Name"
+        required
+      />
+      <div class="error-message">Name cannot be blank.</div>
+    </div>
+    <div class="form-group image-upload">
+      <div class="profile-image">
+        <img
+          src="/mood-tracking-app/assets/images/avatar-lisa.jpg"
+          alt="profile avatar"
+        />
+      </div>
+      <div class="input">
+        <label for="profileImage">Upload Image</label>
+        <p>Max 250KB, PNG or JPEG</p>
+        <input
+          type="file"
+          id="profileImage"
+          name="profileImage"
+          accept="image/png, image/jpeg"
+          oninvalid="this.setCustomValidity('Uploaded image is too large or the wrong file type')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+    </div>
+    <div class="form-group form-footer">
+      <button
+        class="btn btn--primary"
+        type="submit"
+      >
+        Save changes
+      </button>
+    </div>
+  </form>
+</div>
+
+    </div>
   </div>
 </header>
 

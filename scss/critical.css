@@ -95,6 +95,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -256,7 +258,10 @@ p {
   gap: 2rem;
 }
 .form-modal label {
-  font: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -325,8 +330,48 @@ p {
   text-decoration: none;
   color: var(--colors-blue-600);
 }
+.form-modal .form-group.image-upload {
+  display: flex;
+  gap: 1.25rem;
+}
+.form-modal--wide {
+  max-width: 37.5rem;
+}
+.form-modal__title {
+  font-size: clamp(1.75rem, 1.5115rem + 1.0178vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+.form-modal .close-icon {
+  position: absolute;
+  top: 7.5px;
+  right: 16.5px;
+  width: 10px;
+  height: 10px;
+}
+
+.profile-image {
+  overflow: hidden;
+  border-radius: 100vw;
+  height: 40px;
+  width: 40px;
+}
+
+form#settings .profile-image {
+  height: 64px;
+  width: 64px;
+}
+
+.settings-modal {
+  position: absolute;
+  top: 100%;
+}
 
 header {
+  position: relative;
+}
+header .container {
   position: relative;
 }
 header .navbar {
@@ -351,12 +396,6 @@ header .profile {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-}
-header .profile-image {
-  overflow: hidden;
-  border-radius: 100vw;
-  height: 40px;
-  width: 40px;
 }
 header .dropdown-toggle {
   background: none;
