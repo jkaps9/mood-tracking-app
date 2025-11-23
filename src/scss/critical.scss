@@ -168,7 +168,7 @@ p {
   }
 
   label {
-    font: inherit;
+    @include fonts.textpreset6Regular;
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -246,10 +246,54 @@ p {
     text-decoration: none;
     color: var(--colors-blue-600);
   }
+
+  .form-group.image-upload {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &--wide {
+    max-width: 37.5rem;
+  }
+
+  &__title {
+    @include fonts.textpreset3;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 7.5px;
+    right: 16.5px;
+
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.profile-image {
+  overflow: hidden;
+  border-radius: 100vw;
+  height: 40px;
+  width: 40px;
+}
+
+form#settings {
+  .profile-image {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+.settings-modal {
+  position: absolute;
+  top: 100%;
 }
 
 header {
   position: relative;
+  .container {
+    position: relative;
+  }
 
   .navbar {
     display: flex;
@@ -276,13 +320,6 @@ header {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-  }
-
-  .profile-image {
-    overflow: hidden;
-    border-radius: 100vw;
-    height: 40px;
-    width: 40px;
   }
 
   .dropdown-toggle {
